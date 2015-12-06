@@ -1,4 +1,4 @@
-./bin/*
-./outputs/*
-./csv/*
+/bin/*
+/outputs/*
+/csv/*
 timer.flag
