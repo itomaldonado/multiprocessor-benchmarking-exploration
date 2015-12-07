@@ -1,4 +1,4 @@
-import os, re, csv
+import os, re, csv, sys
 
 # Variables for the program, al dirs need to end with a '/'
 benchmark_dir = './'
@@ -88,6 +88,11 @@ with open(benchmark_dir + csv_output_dir + csv_output_file, 'wb') as csv_out, op
           if m is None:
             m = re.search(total_no_acc_time_regex, data, re.MULTILINE)
             group_index = total_no_acc_time_group
+            # If we can't find the total time here either, exit but print some help
+            if m is None:
+              print "File: " + out_filename + " is not a properly formatted .out file. Check its contents and try again. If you wish to ignore it, simply remove it from the folder or delete its content."
+              sys.exit(1)
+
 
           row_to_write['total time'] = m.group(group_index)
           total_row_to_write['time'] = m.group(group_index)
