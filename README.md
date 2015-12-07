@@ -12,7 +12,7 @@ can be seen in the file `./config/make.def`.
 We also have it set-up to only compile problem sizes A,B,C,S and W. This can be seen
 in the file `./config/suite.def`.  
 
-To compile simply run `make suite` all the generated executables will found in `./bin/`
+To compile simply run `./compile_suite.sh` all the generated executables will found in `./bin/`
 and will be in the format of `<program>.<class>.x` for example, for the program *BT* with
 class *A* the executable will be `bt.A.x`.
 

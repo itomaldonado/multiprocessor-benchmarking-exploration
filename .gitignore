@@ -8,9 +8,20 @@
 ehthumbs.db
 Thumbs.db
 
+# Benchmark files
 bin/
 outputs/
 csv/
 timer.flag
 
-gitignore
+# Compilation Files
+*/core
+*/*~
+*/*.o
+*/npbparams.h
+*/*.obj
+*/*.exe
+sys/setparams
+sys/makesuite
+sys/setparams.h
+*/rii_files
