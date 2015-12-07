@@ -10,6 +10,9 @@ fi
 # Touch the 'timer.flag' file to enable deep timers
 touch ./timer.flag
 
+# Create the './outputs' directory if it doesn't exist
+mkdir -p ./outputs
+
 # Start timer to keep track of time taken
 start_all=`date +%s`
 
