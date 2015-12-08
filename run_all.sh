@@ -19,11 +19,18 @@ start_all=`date +%s`
 # Let's run all scripts...
 echo "Running benchmark for $1 Threads and $2 Runs."
 for ((a = 1; a <= $1; a++)); do
+  export OMP_PROC_BIND=true
+  export OMP_DISPLAY_ENV=true
+  export OMP_PLACES=threads
+  #export OMP_PLACES=cores
+  #export OMP_PLACES=sockets
+  #export OMP_PLACES="{0,4}, {1,5}, {2,6}, {3,7}"
+  #export OMP_PLACES="{0,2}, {1,3}"
   export OMP_NUM_THREADS=$a
-  for i in $(ls ./bin); do
+  for i in $(ls ./bin/ | grep C); do
     for ((j = 1; j <= $2; j++)); do
       start=`date +%s`
-      ./bin/$i > ./outputs/$i.T$a.run$j.out;
+      ./bin/$i &> ./outputs/$i.T$a.run$j.out;
       end=`date +%s`
       echo "Finished $i -- Thread $a -- Run $j -- Took $((end-start)) seconds"
     done
