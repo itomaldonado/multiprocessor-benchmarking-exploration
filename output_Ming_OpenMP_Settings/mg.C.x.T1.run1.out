@@ -1,0 +1,79 @@
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+  _OPENMP = '201307'
+  OMP_DYNAMIC = 'FALSE'
+  OMP_NESTED = 'FALSE'
+  OMP_NUM_THREADS = '1'
+  OMP_SCHEDULE = 'DYNAMIC'
+  OMP_PROC_BIND = 'TRUE'
+  OMP_PLACES = '{0},{1},{2},{3},{4},{5},{6},{7}'
+  OMP_STACKSIZE = '140720942268079'
+  OMP_WAIT_POLICY = 'PASSIVE'
+  OMP_THREAD_LIMIT = '4294967295'
+  OMP_MAX_ACTIVE_LEVELS = '2147483647'
+  OMP_CANCELLATION = 'FALSE'
+  OMP_DEFAULT_DEVICE = '0'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+ NAS Parallel Benchmarks (NPB3.3-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:                     20
+ Number of available threads:     1
+
+ Initialization time:           5.511 seconds
+
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+  iter  20
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.5706732285705E-06
+ Error is    0.6101090353211E-11
+
+
+ MG Benchmark Completed.
+ Class           =                        C
+ Size            =            512x 512x 512
+ Iterations      =                       20
+ Time in seconds =                    54.31
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                  2866.61
+ Mop/s/thread    =                  2866.61
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              08 Dec 2015
+
+ Compile options:
+    F77          = gfortran
+    FLINK        = $(F77)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp -mcmodel=medium
+    FLINKFLAGS   = -O3 -fopenmp -mcmodel=medium
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+  SECTION   Time (secs)
+  benchmk :   54.312  (100.00%)
+  mg3P    :   39.273  ( 72.31%)
+  psinv   :   13.643  ( 25.12%)
+  resid   :   29.944  ( 55.13%)
+    --> mg-resid:   15.255  ( 28.09%)
+  rprj3   :    4.246  (  7.82%)
+  interp  :    4.944  (  9.10%)
+  norm2   :    0.350  (  0.65%)
+  comm3   :    0.613  (  1.13%)
